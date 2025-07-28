@@ -117,7 +117,7 @@ scikit-learn
    ```
 2. **Run the Container**
    ```sh
-   docker run --rm -v "$(pwd):/app" pdf-analyzer-b
+   docker run --rm -v "$(cd "$(pwd)"; pwd | sed 's|^/c|C:|' | sed 's|/|\\|g'):/app" pdf-analyzer-b
    ```
    - This mounts the project directory and runs the analysis. Output JSON files will be created in `/app/output` inside the container (create this directory if needed).
 
@@ -148,7 +148,7 @@ scikit-learn
 
 ```sh
 docker build -t pdf-analyzer-b .
-docker run --rm -v "$(pwd):/app" pdf-analyzer-b
+docker run --rm -v "$(cd "$(pwd)"; pwd | sed 's|^/c|C:|' | sed 's|/|\\|g'):/app" pdf-analyzer-b
 ```
 
 ## Notes
