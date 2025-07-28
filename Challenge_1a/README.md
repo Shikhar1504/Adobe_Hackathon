@@ -16,7 +16,11 @@ docker build --platform linux/amd64 -t pdf-processor .
 
 ### Run Command
 ```sh
-docker run --rm -v $(pwd)/sample_dataset/pdfs:/app/input:ro -v $(pwd)/sample_dataset/outputs:/app/output --network none pdf-processor
+docker run --rm \
+  -v "$(pwd -W)/sample_dataset/pdfs:/app/input:ro" \
+  -v "$(pwd -W)/sample_dataset/outputs:/app/output" \
+  --network none \
+  pdf-processor
 ```
 
 ### Critical Constraints
@@ -72,7 +76,11 @@ pymupdf==1.22.0
    ```
 2. **Run the Container**
    ```sh
-   docker run --rm -v $(pwd)/sample_dataset/pdfs:/app/input:ro -v $(pwd)/sample_dataset/outputs:/app/output --network none pdf-processor
+   docker run --rm \
+   -v "$(pwd -W)/sample_dataset/pdfs:/app/input:ro" \
+   -v "$(pwd -W)/sample_dataset/outputs:/app/output" \
+   --network none \
+   pdf-processor
    ```
    - This mounts the input PDFs and output directory, and runs the script in a secure, reproducible environment.
    - Output JSON files will appear in `sample_dataset/outputs/`.
@@ -188,7 +196,11 @@ Each PDF generates a corresponding JSON file that must conform to the schema def
 ### Local Testing
 ```sh
 docker build --platform linux/amd64 -t pdf-processor .
-docker run --rm -v $(pwd)/sample_dataset/pdfs:/app/input:ro -v $(pwd)/sample_dataset/outputs:/app/output --network none pdf-processor
+docker run --rm \
+  -v "$(pwd -W)/sample_dataset/pdfs:/app/input:ro" \
+  -v "$(pwd -W)/sample_dataset/outputs:/app/output" \
+  --network none \
+  pdf-processor
 ```
 
 ## Validation Checklist
