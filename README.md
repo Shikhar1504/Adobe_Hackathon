@@ -79,8 +79,9 @@ Explore each challenge's README for technical deep-dives, usage instructions, an
 
 **Let's connect the dots and build the future of reading—together.**
 
+---
 
-TEAM MEMBERS:
-SHIKHAR SHINA
-SANSKAR DUBEY
-SACHIN KUMAR
+## TEAM MEMBERS:
+- SHIKHAR SHINA
+- SANSKAR DUBEY
+- SACHIN KUMAR
