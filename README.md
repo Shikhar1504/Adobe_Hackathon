@@ -84,4 +84,4 @@ Explore each challenge's README for technical deep-dives, usage instructions, an
 ## TEAM MEMBERS:
 - SHIKHAR SINHA
 - SANSKAR DUBEY
-- SACHIN KUMAR
+- SACHIN KUMAR 
